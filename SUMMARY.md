@@ -2,5 +2,5 @@
 
 * [Introduction](README.md)
 * [Install]()
-  * [Install CentOS](Centos/Install.md)
+  * [CentOS](Centos/Install.md)
 
