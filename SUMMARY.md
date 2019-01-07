@@ -5,7 +5,7 @@
   * [Centos](Centos/Install.md)
   * [Docker](Docker/Install.md)
 * [**Deployment**]()
-  * [Kubernetes]()
+  * [Kubernetes](Deployment/Kubernetes.md)
 
 
 
