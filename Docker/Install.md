@@ -21,7 +21,7 @@ yum -y install docker-ce-$Version
 mkdir -p /etc/docker/
 {
     "graph": "/data/apps/docker/",
-    "log-opts": {"max-size": "100m", "max-file": "10"},
+    "log-opts": {"max-size": "1024m", "max-file": "10"},
     "live-restore": true,
     "registry-mirrors": ["https://h3vtnoaa.mirror.aliyuncs.com"]
 }
