@@ -52,7 +52,7 @@ fs.file-max = 6553560
 EOF
 
 # ulimit
-cat << EOF > /etc/security/limits.conf
+cat << EOF > /etc/security/limits.d/80-nofile.conf
 *    soft nofile 655350
 *    hard nofile 655350
 EOF
