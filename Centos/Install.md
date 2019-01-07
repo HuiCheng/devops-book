@@ -38,7 +38,7 @@ server 127.127.1.0
 fudge  127.127.1.0 stratum 10
 
 server   ntp1.aliyun.com iburst minpoll 4 maxpoll 10
-restrict ntp1.aliyun.com          nomodify notrap nopeer noquery
+restrict ntp1.aliyun.com nomodify notrap nopeer noquery
 
 server   ntp2.aliyun.com          iburst minpoll 4 maxpoll 10
 restrict ntp2.aliyun.com          nomodify notrap nopeer noquery
