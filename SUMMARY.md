@@ -4,6 +4,8 @@
 * [**Install**](install.md)
   * [Centos](Centos/Install.md)
   * [Docker](Docker/Install.md)
+* Deployment
+  * Kubernetes
 
 
 
