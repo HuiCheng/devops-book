@@ -28,3 +28,9 @@ mkdir -p /etc/docker/
 EOF
 ```
 
+#### 启动
+```bash
+systemctl enable docker
+systemctl start  docker
+```
+
