@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Install]()
+* [Install](install.md)
   * [CentOS](Centos/Install.md)
 
