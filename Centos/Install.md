@@ -16,8 +16,8 @@ sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 #关闭service
 ServiceList={firewalld,}
 for ServiceName in ServiceList; do
-    systemctl $ServiceName firewalld
-    systemctl $ServiceName firewalld
+    systemctl stop    $ServiceName
+    systemctl disable $ServiceName
 done
 
 #时间同步
@@ -43,6 +43,8 @@ restrict ntp1.aliyun.com          nomodify notrap nopeer noquery
 server   ntp2.aliyun.com          iburst minpoll 4 maxpoll 10
 restrict ntp2.aliyun.com          nomodify notrap nopeer noquery
 EOF
+systemctl restart ntpd
+systemctl enable  ntpd
 ```
 
 
