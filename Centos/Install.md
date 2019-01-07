@@ -6,9 +6,11 @@
 
 初级运维即可完成
 
-# Note
+# Setting
 
-1. 管理selinux
+* 关闭selinux
+
+* 关闭service
 
 
 
