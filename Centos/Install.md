@@ -8,6 +8,24 @@
 
 # Setting
 
+ 
+
+---
+
+ 
+
+ 
+
+ 
+
+---
+
+```
+# 关闭selinux
+setenforce 0
+sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
+```
+
 ```bash
 # 关闭selinux
 setenforce 0
