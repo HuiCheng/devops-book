@@ -8,18 +8,10 @@
 
 # Setting
 
-* 关闭selinux
-
-* 关闭service
-
-* 优化硬盘
-
-* 优化内核
-
-```py
-import os
-
-
+```bash
+#关闭selinux
+setenforce 0
+sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 
 
 ```
