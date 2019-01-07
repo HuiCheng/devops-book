@@ -20,8 +20,6 @@ sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 #### 关闭service
 
 ```bash
-
-# 关闭service
 ServiceList={firewalld,}
 for ServiceName in ServiceList; do
 systemctl stop $ServiceName
