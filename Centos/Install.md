@@ -9,9 +9,6 @@
 # Setting
 ---
 
-
-
-
 ##### 关闭selinux
 
 ```shell
