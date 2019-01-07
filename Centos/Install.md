@@ -30,17 +30,14 @@ done
 ```bash
 yum install -y ntp
 cat << EOF > /etc/ntp.conf
-# ntp.conf
 logfile    /var/log/ntp.log
 pidfile    /var/run/ntpd.pid
 driftfile  /var/lib/ntp/drift
 
-# Access Control Support
 restrict    127.0.0.1
 restrict    default kod nomodify notrap nopeer noquery
 restrict -6 default kod nomodify notrap nopeer noquery
 
-# local clock
 server 127.127.1.0
 fudge  127.127.1.0 stratum 10
 
