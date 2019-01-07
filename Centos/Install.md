@@ -55,6 +55,7 @@ systemctl enable  ntpd
 systemctl restart ntpd
 ```
 
+#### sysctl
 
 ```bash
 
