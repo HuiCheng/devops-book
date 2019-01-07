@@ -8,13 +8,21 @@
 
 # Setting
 
-* 关闭selinux
-
+* > 关闭selinux
 * 关闭service
 
 * 优化硬盘
 
 * 优化内核
+
+
+
+
+
+```
+import os
+
+```
 
 
 
