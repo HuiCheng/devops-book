@@ -43,8 +43,9 @@ restrict ntp1.aliyun.com          nomodify notrap nopeer noquery
 server   ntp2.aliyun.com          iburst minpoll 4 maxpoll 10
 restrict ntp2.aliyun.com          nomodify notrap nopeer noquery
 EOF
-systemctl restart ntpd
 systemctl enable  ntpd
+systemctl restart ntpd
+
 ```
 
 
