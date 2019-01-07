@@ -65,6 +65,8 @@ net.ipv4.tcp_fin_timeout     = 60
 net.ipv4.ip_local_port_range = 1024 65535
 EOF
 ```
+
+#### ulimit
 ```bash
 # ulimit
 cat << EOF > /etc/security/limits.d/80-nofile.conf
