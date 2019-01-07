@@ -16,3 +16,15 @@ yum -y install docker-ce-$Version
 # Setting
 ---
 
+#### 配置文件
+```bash
+mkdir -p /etc/docker/
+cat << EOF > /etc/docker/daemon.json
+        {
+            "graph": "/data/apps/docker/",
+            "log-opts": {"max-size": "100m", "max-file": "10"},
+            "registry-mirrors": ["https://h3vtnoaa.mirror.aliyuncs.com"]
+        }
+EOF
+```
+
