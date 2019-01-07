@@ -66,7 +66,6 @@ net.ipv4.ip_local_port_range = 1024 65535
 EOF
 ```
 ```bash
-
 # ulimit
 cat << EOF > /etc/security/limits.d/80-nofile.conf
 *    soft nofile 655350
