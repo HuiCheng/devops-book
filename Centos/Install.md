@@ -17,6 +17,7 @@ setenforce 0
 sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 ```
 
+#### 关闭service
 
 ```bash
 
