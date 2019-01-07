@@ -47,7 +47,7 @@ systemctl enable  ntpd
 systemctl restart ntpd
 
 # sysctl
-cat << EOF > /etc/sysctl.d/80-file.conf
+cat << EOF > /etc/sysctl.d/80-init.conf
 fs.file-max = 6553560
 EOF
 
