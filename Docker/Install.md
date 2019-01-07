@@ -1,5 +1,5 @@
 # Install
----
+
 ```shell
 
 export Version=18.06.1.ce-3.el7
@@ -10,11 +10,11 @@ yum -y install docker-ce-$Version
 ```
 
 # Requirements
----
+
 初级运维即可完成
 
 # Setting
----
+
 
 #### 配置文件
 ```bash
