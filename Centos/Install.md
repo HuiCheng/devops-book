@@ -49,6 +49,7 @@ systemctl restart ntpd
 # sysctl
 cat << EOF > /etc/sysctl.d/80-init.conf
 fs.file-max = 6553560
+net.ipv4.ip_local_port_range = 1024 65535
 EOF
 
 # ulimit
