@@ -12,9 +12,7 @@
 
 ##### 关闭selinux
 
-
-```
-
+```shell
 setenforce 0
 sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 ```
