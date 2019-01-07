@@ -46,7 +46,11 @@ EOF
 systemctl enable  ntpd
 systemctl restart ntpd
 
-# 内核优化
+# 
+cat << EOF > /etc/security/limits.conf
+*    soft nofile 655350
+*    hard nofile 655350
+EOF
 ```
 
 
