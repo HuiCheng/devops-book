@@ -2,7 +2,7 @@
 
 | 角色 | 数量 | 组件 |  |
 | :---: | :---: | :---: | :---: |
-| K8S-Master | 3 | Kubeadm/Docker/Vip/ |  |
+| K8S-Master | 3 | Docker/Vip/Kubeadm |  |
 |  |  |  |  |
 |  |  |  |  |
 |  |  |  |  |
