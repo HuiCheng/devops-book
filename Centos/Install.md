@@ -73,5 +73,10 @@ cat << EOF > /etc/security/limits.d/80-nofile.conf
 EOF
 ```
 
+#### swapoff
+```bash
+swapoff -a
+```
+
 
 
