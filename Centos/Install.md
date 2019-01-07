@@ -8,5 +8,7 @@
 
 # Note
 
+1. 管理selinux
+
 
 
