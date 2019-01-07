@@ -45,6 +45,8 @@ restrict ntp2.aliyun.com nomodify notrap nopeer noquery
 EOF
 systemctl enable  ntpd
 systemctl restart ntpd
+
+# 内核优化
 ```
 
 
