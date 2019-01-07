@@ -73,7 +73,7 @@ cat << EOF > /etc/security/limits.d/80-nofile.conf
 EOF
 ```
 
-#### swapoff
+#### 关闭交换分区
 ```bash
 swapoff -a
 ```
