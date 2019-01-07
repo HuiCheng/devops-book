@@ -56,7 +56,6 @@ systemctl restart ntpd
 ```
 
 #### sysctl
-
 ```bash
 cat << EOF > /etc/sysctl.d/80-init.conf
 fs.file-max = 6553560
