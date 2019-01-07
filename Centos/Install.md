@@ -28,8 +28,7 @@ done
 #### 时间同步
 
 ```bash
-# 时间同步
-yum install ntp
+yum install -y ntp
 cat << EOF > /etc/ntp.conf
 # ntp.conf
 logfile    /var/log/ntp.log

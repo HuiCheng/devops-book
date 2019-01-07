@@ -1,8 +1,0 @@
-## Centos
-
-
-
-Install Centos
-
-
-
