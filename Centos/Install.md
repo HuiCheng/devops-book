@@ -8,7 +8,9 @@
 
 # Setting
 
-* 关闭selinux
+* 关闭selinux  
+  d adsfadsf `  
+  `  
 
 * 关闭service
 
