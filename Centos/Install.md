@@ -9,7 +9,7 @@
 # Setting
 
 ```bash
-#关闭selinux
+# 关闭selinux
 setenforce 0
 sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 
