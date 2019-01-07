@@ -2,7 +2,7 @@
 
 * [**Introduction**](README.md)
 * [**Install**](install.md)
-  * [CentOS](Centos/Install.md)
+  * [Centos](Centos/Install.md)
   * [Docker](Docker/Install.md)
 
 
