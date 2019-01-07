@@ -8,7 +8,7 @@
 
 # Setting
 ---
-##### 关闭selinux
+#### 关闭selinux
 
 ```shell
 setenforce 0
