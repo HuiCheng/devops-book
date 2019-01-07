@@ -30,7 +30,9 @@ EOF
 
 #### 启动
 ```bash
-systemctl enable docker
+
 systemctl start  docker
+systemctl enable docker
+
 ```
 
