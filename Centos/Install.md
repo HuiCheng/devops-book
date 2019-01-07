@@ -17,10 +17,18 @@ setenforce 0
 sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 ```
 
+
 ```bash
-# 关闭selinux
-setenforce 0
-sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
+
+# 关闭service
+ServiceList={firewalld,}
+for ServiceName in ServiceList; do
+systemctl stop $ServiceName
+systemctl disable $ServiceName
+done
+```
+
+```bash
 
 # 关闭service
 ServiceList={firewalld,}
