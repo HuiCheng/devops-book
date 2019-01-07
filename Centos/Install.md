@@ -46,6 +46,11 @@ EOF
 systemctl enable  ntpd
 systemctl restart ntpd
 
+# sysctl
+cat << EOF > /etc/sysctl.d/80-file.conf
+fs.file-max = 6553560
+EOF
+
 # ulimit
 cat << EOF > /etc/security/limits.conf
 *    soft nofile 655350
