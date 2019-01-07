@@ -15,7 +15,6 @@ yum -y install docker-ce-$Version
 
 # Setting
 
-
 #### 配置文件
 ```bash
 mkdir -p /etc/docker/
