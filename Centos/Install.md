@@ -58,14 +58,14 @@ systemctl restart ntpd
 #### sysctl
 
 ```bash
-
-# sysctl
 cat << EOF > /etc/sysctl.d/80-init.conf
 fs.file-max = 6553560
 
 net.ipv4.tcp_fin_timeout     = 60
 net.ipv4.ip_local_port_range = 1024 65535
 EOF
+```
+```bash
 
 # ulimit
 cat << EOF > /etc/security/limits.d/80-nofile.conf
