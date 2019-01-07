@@ -1,6 +1,6 @@
 # Summary
 
 * [Introduction](README.md)
-* [Install CentOS]()
+* [Install]()
   * [Install CentOS](Centos/Install.md)
 
