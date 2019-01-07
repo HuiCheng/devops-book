@@ -12,3 +12,4 @@ tar xzf - -C /usr/local/bin/ caddy
 初级运维即可完成
 
 # Setting
+---
