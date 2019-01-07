@@ -20,7 +20,7 @@ for ServiceName in ServiceList; do
     systemctl disable $ServiceName
 done
 
-#时间同步
+# 时间同步
 yum install ntp
 cat << EOF > /etc/ntp.conf
 # ntp.conf
@@ -45,7 +45,6 @@ restrict ntp2.aliyun.com          nomodify notrap nopeer noquery
 EOF
 systemctl enable  ntpd
 systemctl restart ntpd
-
 ```
 
 
