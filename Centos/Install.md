@@ -27,6 +27,10 @@ systemctl disable $ServiceName
 done
 ```
 
+#### 时间同步
+
+
+
 ```bash
 # 时间同步
 yum install ntp
