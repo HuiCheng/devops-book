@@ -28,14 +28,6 @@ done
 ```
 
 ```bash
-
-# 关闭service
-ServiceList={firewalld,}
-for ServiceName in ServiceList; do
-    systemctl stop    $ServiceName
-    systemctl disable $ServiceName
-done
-
 # 时间同步
 yum install ntp
 cat << EOF > /etc/ntp.conf
