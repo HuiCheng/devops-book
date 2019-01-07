@@ -19,7 +19,7 @@ sed -i 's/=enforcing/=disabled/g' /etc/selinux/config
 
 ```bash
 ServiceList={firewalld,}
-for ServiceName in ServiceList; do
+for ServiceName in $ServiceList; do
     systemctl stop    $ServiceName
     systemctl disable $ServiceName
 done
