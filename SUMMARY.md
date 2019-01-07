@@ -2,5 +2,5 @@
 
 * [**Introduction**](README.md)
 * [**Install**](install.md)
-  * [CentOS](Centos)
+  * [CentOS](Centos/Install.md)
 
