@@ -1,7 +1,6 @@
 # Install
 
 ```shell
-
 export Version=18.06.1.ce-3.el7
 
 yum install -y yum-utils device-mapper-persistent-data lvm2
