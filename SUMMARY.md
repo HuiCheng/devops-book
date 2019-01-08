@@ -1,7 +1,7 @@
 # Summary
 
 * [**Introduction**](README.md)
-* [**Install**](install.md)
+* [**Install**]()
   * [Centos](Centos/Install.md)
   * [Docker](Docker/Install.md)
 * [**Deployment**]()
