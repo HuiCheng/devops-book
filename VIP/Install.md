@@ -25,7 +25,7 @@ mkdir -p data/{data,conf,dockerfile}/
 
 ```
 
-#### 健康检查
+#### 健康检查脚本
 
 ```bash
 cat << EOF > data/conf/healthcheck.sh
@@ -36,7 +36,7 @@ else; echo -n 0; fi
 EOF
 ```
 
-#### 负载均衡
+#### 负载均衡配置
 
 ```bash
 cat << EOF > data/conf/gobetween
@@ -59,20 +59,8 @@ static_list = [
 ]
 EOF
 ```
-#### 负载均衡
 
-```bash
-cat << EOF > data/dockerfile/Dockerfile
-FROM alpine:3.8
-ENV  PKGS bash curl keepalived tzdata
-RUN  apk add --no-cache \$PKGS && \
-     ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
-     test -f /usr/local/bin/gobetween || \
-     curl -sSL https://github.com/yyyar/gobetween/releases/download/0.6.1/gobetween_0.6.1_linux_amd64.tar.gz | \
-     tar xzf - -C /usr/local/bin/ gobetween
-EOF
-```
-#### 负载均衡
+#### 高可用配置
 
 ```bash
 cat << EOF > data/conf/keepalived.conf
@@ -91,6 +79,21 @@ services:
     restart: always
 EOF
 ```
+
+#### Dockerfile
+
+```bash
+cat << EOF > data/dockerfile/Dockerfile
+FROM alpine:3.8
+ENV  PKGS bash curl keepalived tzdata
+RUN  apk add --no-cache \$PKGS && \
+     ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
+     test -f /usr/local/bin/gobetween || \
+     curl -sSL https://github.com/yyyar/gobetween/releases/download/0.6.1/gobetween_0.6.1_linux_amd64.tar.gz | \
+     tar xzf - -C /usr/local/bin/ gobetween
+EOF
+```
+
 
 #### 启动
 
