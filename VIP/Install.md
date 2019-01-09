@@ -32,6 +32,7 @@ cat << EOF > data/conf/healthcheck.sh
 curl -sk https://\$1:\$2/ 2>&1 > /dev/null
 echo -n \$?
 EOF
+chmod +x data/conf/healthcheck.sh
 ```
 
 #### 负载均衡配置
