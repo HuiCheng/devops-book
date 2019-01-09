@@ -50,7 +50,6 @@ RUN  apk add --no-cache $PKGS && \
      test -f /usr/local/bin/gobetween || \
      curl -sSL https://github.com/yyyar/gobetween/releases/download/0.6.1/gobetween_0.6.1_linux_amd64.tar.gz | \
      tar xzf - -C /usr/local/bin/ gobetween
-RUN 
 EOF
 
 cat << EOF > data/conf/keepalived.conf
