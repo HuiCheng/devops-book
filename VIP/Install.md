@@ -8,7 +8,7 @@ ProjectPath=$BasePath/$Name/
 mkdir -p $ProjectPath
 cd $ProjectPath
 
-mkdir -p data/{data,conf}/
+mkdir -p data/{data,conf,dockerfile}/
 cat << EOF > data/conf/Caddyfile
 
 EOF
@@ -27,8 +27,6 @@ services:
     volumes:
     - ./data/data/:/data/
     restart: always
-
-
 EOF
 
 docker-compose up -d
