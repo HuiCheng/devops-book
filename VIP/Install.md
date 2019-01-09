@@ -4,7 +4,7 @@
 BasePath=/data/apps/VIP/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
-VIP=172.16.190.200
+VIP=0.0.0.0
 PORT=6443
 NODE01=172.11.51.201:6443
 NODE02=172.11.51.202:6443
