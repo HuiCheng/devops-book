@@ -34,7 +34,11 @@ timeout 2 curl -k https://\$1:\$2/
 if [ "\$?" == "0" ]; then; echo -n 1
 else; echo -n 0; fi
 EOF
+```
 
+#### 负载均衡
+
+```bash
 cat << EOF > data/conf/gobetween
 [servers.k8s-vip]
 bind     = "$VIP:$PORT"
@@ -54,7 +58,10 @@ static_list = [
     "$NODE03 weight=5"
 ]
 EOF
+```
+#### 负载均衡
 
+```bash
 cat << EOF > data/dockerfile/Dockerfile
 FROM alpine:3.8
 ENV  PKGS bash curl keepalived tzdata
@@ -64,7 +71,10 @@ RUN  apk add --no-cache \$PKGS && \
      curl -sSL https://github.com/yyyar/gobetween/releases/download/0.6.1/gobetween_0.6.1_linux_amd64.tar.gz | \
      tar xzf - -C /usr/local/bin/ gobetween
 EOF
+```
+#### 负载均衡
 
+```bash
 cat << EOF > data/conf/keepalived.conf
 EOF
 
