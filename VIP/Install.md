@@ -6,6 +6,16 @@ Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
 mkdir -p $ProjectPath
+cd $ProjectPath
+
+mkdir -p data/{data,conf}/
+cat << EOF > data/conf/Caddyfile
+EOF
+
+cat << EOF > data/conf/Keepalive.conf
+EOF
+
+
 
 ```
 
