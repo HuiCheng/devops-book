@@ -22,7 +22,6 @@ NODE03=172.11.51.203:6443
 ```bash
 mkdir -p $ProjectPath; cd $ProjectPath
 mkdir -p data/{data,conf,dockerfile}/
-
 ```
 
 #### 健康检查脚本
@@ -82,6 +81,7 @@ EOF
 ```
 
 #### Docker-compose
+
 ```bash
 cat << EOF > docker-compose.yaml
 version: '2.2'
@@ -90,8 +90,7 @@ services:
     build:
       context: data/dockerfile/
     command: gobetween -c /data/gobetween
-    ports:
-    - 9000:9000
+    network_mode: "host"
     volumes:
     - ./data/conf/:/data/
     restart: always
