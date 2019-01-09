@@ -10,12 +10,25 @@ cd $ProjectPath
 
 mkdir -p data/{data,conf}/
 cat << EOF > data/conf/Caddyfile
+
 EOF
 
 cat << EOF > data/conf/Keepalived.conf
 EOF
 
 cat << EOF > docker-compose.yaml
+version: '2.2'
+services:
+  caddy:
+    image: registry.cn-beijing.aliyuncs.com/vipdax/01:ykt-php-v4
+    command: caddy --conf=/data/Caddyfile
+    ports:
+    - 9000:9000
+    volumes:
+    - ./data/data/:/data/
+    restart: always
+
+
 EOF
 
 docker-compose up -d
