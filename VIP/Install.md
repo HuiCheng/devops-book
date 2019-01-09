@@ -61,11 +61,10 @@ services:
   gobetween:
     build:
       context: data/dockerfile/
-    command: gobetween -c /data/gobetween
-    ports:
-    - 9000:9000
+    command: gobetween -c /data/conf/gobetween
+    network_mode: "host"
     volumes:
-    - ./data/data/:/data/
+    - ./data/:/data/
     restart: always
 EOF
 
