@@ -4,7 +4,7 @@
 BasePath=/data/apps/VIP/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
-VIP=0.0.0.0
+VIP=172.16.190.100/24 ens33
 PORT=6443
 NODE01=172.11.51.201:6443
 NODE02=172.11.51.202:6443
@@ -45,7 +45,7 @@ chmod +x data/conf/healthcheck.sh
 ```bash
 cat << EOF > data/conf/gobetween
 [servers.$Name]
-bind     = "$VIP:$PORT"
+bind     = "0.0.0.0:$PORT"
 protocol = "tcp"
 balance  = "roundrobin"
 
@@ -75,6 +75,24 @@ EOF
 
 ```bash
 cat << EOF > data/conf/keepalived.conf
+global_defs {
+    router_id $Name  
+}
+
+vrrp_instance $$Name {
+    state             MASTER
+    interface         ens18
+    virtual_router_id 200
+    priority          100
+    advert_int        1
+    authentication {
+        auth_type PASS
+        auth_pass $Name-PW
+    }
+    virtual_ipaddress {
+        172.11.51.200/24 dev ens18
+    }
+}
 EOF
 ```
 
@@ -114,5 +132,6 @@ EOF
 ```bash
 docker-compose up -d
 ```
+
 
 
