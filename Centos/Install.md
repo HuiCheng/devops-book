@@ -1,6 +1,6 @@
 # Install
 
-安装最新的7版本即可(不需要swap分区）
+安装最新的7版本即可\(不需要swap分区）  
 数据盘位置 /data/apps
 
 # Requirements
@@ -29,7 +29,7 @@ done
 #### 时间同步
 
 ```bash
-yum install -y ntp
+yum install -y epel-release ntp
 cat << EOF > /etc/ntp.conf
 logfile    /var/log/ntp.log
 pidfile    /var/run/ntpd.pid
@@ -54,6 +54,7 @@ systemctl restart ntpd
 ```
 
 #### sysctl
+
 ```bash
 cat << EOF > /etc/sysctl.d/80-init.conf
 fs.file-max = 6553560
@@ -66,6 +67,7 @@ sysctl -p
 ```
 
 #### ulimit
+
 ```bash
 # ulimit
 cat << EOF > /etc/security/limits.d/80-nofile.conf
@@ -75,8 +77,10 @@ EOF
 ```
 
 #### 关闭交换分区
+
 ```bash
 swapoff -a
+sed -i 's/^[^#].*swap/#&/' /etc/fstab
 ```
 
 
