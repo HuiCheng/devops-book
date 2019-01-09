@@ -28,7 +28,6 @@ mkdir -p data/{data,conf,dockerfile}/
 #### 健康检查
 
 ```bash
-
 cat << EOF > data/conf/healthcheck.sh
 #/bin/bash
 timeout 2 curl -k https://\$1:\$2/
