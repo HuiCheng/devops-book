@@ -82,10 +82,10 @@ global_defs {
     router_id $Name  
 }
 
-vrrp_instance $$Name {
+vrrp_instance $Name-$RouterID {
     state             MASTER
     interface         ens18
-    virtual_router_id 200
+    virtual_router_id $RouterID
     priority          100
     advert_int        1
     authentication {
