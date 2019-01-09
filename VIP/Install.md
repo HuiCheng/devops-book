@@ -37,9 +37,9 @@ backend_connection_timeout = "2s"
 [servers.k8s-vip.discovery]
 kind = "static"
 static_list = [
-  "$NODE01 weight=5",
-  "$NODE02 weight=5",
-  "$NODE03 weight=5"
+    "$NODE01 weight=5",
+    "$NODE02 weight=5",
+    "$NODE03 weight=5"
 ]
 EOF
 
