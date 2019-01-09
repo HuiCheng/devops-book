@@ -16,7 +16,5 @@
 
 #### 启动
 ```bash
-systemctl start  docker
-systemctl enable docker
 ```
 
