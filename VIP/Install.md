@@ -1,6 +1,11 @@
 # Install
 
 ```shell
+BasePath=/data/apps/VIP/
+Name=k8s-01
+ProjectPath=$BasePath/$Name/
+
+mkdir -p $Path
 
 ```
 
