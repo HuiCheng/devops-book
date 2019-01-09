@@ -59,7 +59,8 @@ cat << EOF > docker-compose.yaml
 version: '2.2'
 services:
   caddy:
-    image: registry.cn-beijing.aliyuncs.com/vipdax/01:ykt-php-v4
+    build:
+      context: data/dockerfile/
     command: caddy --conf=/data/Caddyfile
     ports:
     - 9000:9000
