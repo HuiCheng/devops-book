@@ -10,6 +10,17 @@ mkdir -p $ProjectPath
 cd $ProjectPath
 
 mkdir -p data/{data,conf,dockerfile}/
+cat << EOF > data/conf/healthcheck.sh
+timeout 2 curl -k https://\$1:\$2/ 2>&1 > /dev/null
+if [ "$?" == "0" ]; then
+    echo -n 1
+else
+    echo -n 0
+fi
+    
+EOF
+
+
 cat << EOF > data/conf/gobetween
 
 EOF
