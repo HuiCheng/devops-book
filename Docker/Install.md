@@ -5,7 +5,7 @@ export Version=18.06.1.ce-3.el7
 
 yum install -y yum-utils device-mapper-persistent-data lvm2
 yum-config-manager --add-repo https://mirrors.aliyun.com/docker-ce/linux/centos/docker-ce.repo
-yum -y install docker-ce-$Version
+yum install -y docker-ce-$Version
 ```
 
 # Requirements
@@ -15,6 +15,7 @@ yum -y install docker-ce-$Version
 # Setting
 
 #### 配置文件
+
 ```bash
 mkdir -p /etc/docker/
 {
@@ -27,8 +28,11 @@ EOF
 ```
 
 #### 启动
+
 ```bash
 systemctl start  docker
 systemctl enable docker
 ```
+
+
 
