@@ -22,3 +22,9 @@ systemctl enable kubelet
 
 初级运维即可完成
 
+# Setting
+
+#### 配置文件
+
+```bash
+```
