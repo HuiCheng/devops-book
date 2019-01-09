@@ -135,7 +135,7 @@ services:
     network_mode: "host"
     volumes:
     - ./data/conf/keepalived.conf:/etc/keepalived/keepalived.conf
-    restart: alway
+    restart: always
     cap_add:
     - NET_ADMIN
 EOF
