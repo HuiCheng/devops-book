@@ -38,7 +38,7 @@ EOF
 
 ```bash
 cat << EOF > data/conf/gobetween
-[servers.k8s-vip]
+[servers.$Name]
 bind     = "$VIP:$PORT"
 protocol = "tcp"
 balance  = "roundrobin"
@@ -48,14 +48,15 @@ client_idle_timeout  = "60m"
 backend_idle_timeout = "60m"
 backend_connection_timeout = "2s"
 
-[servers.k8s-vip.discovery]
+[servers.$Name.discovery]
 kind = "static"
 static_list = [
     "$NODE01 weight=5",
     "$NODE02 weight=5",
     "$NODE03 weight=5"
 ]
-[servers.default.healthcheck] 
+
+[servers.$Name.healthcheck] 
 kind         = "exec"
 interval     = "2s"  
 timeout      = "2s"  
