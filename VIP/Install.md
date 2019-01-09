@@ -22,7 +22,6 @@ if [ "$?" == "0" ]; then; echo -n 1
 else; echo -n 0; fi
 EOF
 
-
 cat << EOF > data/conf/gobetween
 [servers.k8s-vip]
 bind     = "$VIP:$PORT"
