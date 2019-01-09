@@ -45,7 +45,7 @@ EOF
 cat << EOF > data/dockerfile/Dockerfile
 FROM alpine:3.8
 ENV  PKGS bash curl keepalived tzdata
-RUN  apk add --no-cache $PKGS && \
+RUN  apk add --no-cache \$PKGS && \
      ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime && \
      test -f /usr/local/bin/gobetween || \
      curl -sSL https://github.com/yyyar/gobetween/releases/download/0.6.1/gobetween_0.6.1_linux_amd64.tar.gz | \
