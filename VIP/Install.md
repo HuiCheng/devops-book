@@ -6,7 +6,8 @@ Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
 RouterID=200
-VIP=172.16.190.100/24 dev ens33
+VRRP=ens33
+VIP="172.16.190.100/24 dev ens33"
 
 PORT=6443
 NODE01=172.11.51.201:6443
@@ -84,7 +85,7 @@ global_defs {
 
 vrrp_instance $Name-$RouterID {
     state             MASTER
-    interface         ens18
+    interface         $VRRP
     virtual_router_id $RouterID
     priority          100
     advert_int        1
