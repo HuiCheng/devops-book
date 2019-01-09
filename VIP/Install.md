@@ -67,8 +67,6 @@ services:
     - ./data/:/data/
     restart: always
 EOF
-
-docker-compose up -d
 ```
 
 # Requirements
@@ -86,7 +84,7 @@ docker-compose up -d
 #### 启动
 
 ```bash
-
+docker-compose up -d
 ```
 
 
