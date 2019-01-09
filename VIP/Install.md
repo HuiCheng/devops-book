@@ -5,7 +5,7 @@ BasePath=/data/apps/VIP/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
-mkdir -p $Path
+mkdir -p $ProjectPath
 
 ```
 
