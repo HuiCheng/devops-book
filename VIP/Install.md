@@ -86,7 +86,7 @@ global_defs {
 }
 
 vrrp_instance $Name-$RouterID {
-    state             SLAVE
+    state             BACKUP
     interface         $VRRP
     virtual_router_id $RouterID
     priority          100
