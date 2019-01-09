@@ -30,7 +30,7 @@ mkdir -p data/{data,conf,dockerfile}/
 cat << EOF > data/conf/healthcheck.sh
 #!/usr/bin/env bash
 curl -k https://\$1:\$2/
-if [ "\$?" == "0" ]; then; echo -n 1; else; echo -n 0; fi
+echo -n \$?
 EOF
 ```
 
@@ -61,6 +61,7 @@ kind         = "exec"
 interval     = "2s"  
 timeout      = "2s"  
 exec_command = "/data/conf/exec_healthcheck.sh"
+exec_expected_positive_output = "0"
 EOF
 ```
 
