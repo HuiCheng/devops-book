@@ -28,7 +28,7 @@ mkdir -p data/{data,conf,dockerfile}/
 
 ```bash
 cat << EOF > data/conf/healthcheck.sh
-#/bin/bash
+#!/usr/bin/env bash
 curl -k https://\$1:\$2/
 if [ "\$?" == "0" ]; then; echo -n 1; else; echo -n 0; fi
 EOF
