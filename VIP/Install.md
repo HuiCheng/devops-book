@@ -20,6 +20,11 @@ NODE03=172.11.51.203:6443
 #### 配置文件
 
 ```bash
+cat << EOF > /etc/sysctl.d/81-vip.conf
+net.ipv4.ip_nonlocal_bind = 1
+EOF
+sysctl -p 
+
 mkdir -p $ProjectPath; cd $ProjectPath
 mkdir -p data/{data,conf,dockerfile}/
 ```
