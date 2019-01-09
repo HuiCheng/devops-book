@@ -63,7 +63,8 @@ net.ipv4.tcp_fin_timeout     = 15
 net.ipv4.ip_local_port_range = 1024 65535
 EOF
 
-sysctl -p
+sysctl -p /etc/sysctl.d/80-init.conf
+
 ```
 
 #### ulimit
