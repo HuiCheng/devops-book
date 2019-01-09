@@ -12,10 +12,10 @@ mkdir -p data/{data,conf}/
 cat << EOF > data/conf/Caddyfile
 EOF
 
-cat << EOF > data/conf/Keepalive.conf
+cat << EOF > data/conf/Keepalived.conf
 EOF
 
-
+d
 
 ```
 
