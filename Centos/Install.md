@@ -1,7 +1,7 @@
 # Install
 
 安装最新的7版本即可(不需要swap分区）
-数据盘位置: /data/apps
+数据盘位置 /data/apps
 
 # Requirements
 
