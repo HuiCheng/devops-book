@@ -86,14 +86,15 @@ EOF
 cat << EOF > docker-compose.yaml
 version: '2.2'
 services:
-gobetween:
-build:
-context: data/dockerfile/
-command: gobetween -c /data/conf/gobetween
-network_mode: "host"
-volumes:
-- ./data/:/data/
-restart: always
+  gobetween:
+    build:
+      context: data/dockerfile/
+    command: gobetween -c /data/gobetween
+    ports:
+    - 9000:9000
+    volumes:
+    - ./data/conf/:/data/
+    restart: always
 EOF
 ```
 
