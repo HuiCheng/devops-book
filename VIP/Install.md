@@ -61,7 +61,7 @@ static_list = [
 kind         = "exec"
 interval     = "2s"  
 timeout      = "2s"  
-exec_command = "/data/conf/exec_healthcheck.sh"
+exec_command = "/data/conf/healthcheck.sh"
 exec_expected_positive_output = "0"
 EOF
 ```
