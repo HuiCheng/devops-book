@@ -11,9 +11,7 @@ cd $ProjectPath
 
 mkdir -p data/{data,conf,dockerfile}/
 cat << EOF > data/conf/gobetween
-:6443 {
-    
-}
+
 EOF
 
 cat << EOF > data/conf/keepalived.conf
