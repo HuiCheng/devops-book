@@ -15,7 +15,10 @@ EOF
 cat << EOF > data/conf/Keepalived.conf
 EOF
 
-d
+cat << EOF > docker-compose.yaml
+EOF
+
+docker-compose up -d
 
 ```
 
