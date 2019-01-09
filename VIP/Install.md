@@ -4,7 +4,7 @@
 BasePath=/data/apps/VIP/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
-VIP=172.16.190.100/24 ens33
+VIP=172.16.190.100/24 dev ens33
 PORT=6443
 NODE01=172.11.51.201:6443
 NODE02=172.11.51.202:6443
@@ -90,7 +90,7 @@ vrrp_instance $$Name {
         auth_pass $Name-PW
     }
     virtual_ipaddress {
-        172.11.51.200/24 dev ens18
+        $VIP
     }
 }
 EOF
