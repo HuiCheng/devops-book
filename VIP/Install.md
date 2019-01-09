@@ -136,6 +136,8 @@ services:
     volumes:
     - ./data/conf/keepalived.conf:/etc/keepalived/keepalived.conf
     restart: alway
+    cap_add:
+    - ALL
 EOF
 ```
 
