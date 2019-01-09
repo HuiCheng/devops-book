@@ -58,10 +58,10 @@ EOF
 cat << EOF > docker-compose.yaml
 version: '2.2'
 services:
-  caddy:
+  gobetween:
     build:
       context: data/dockerfile/
-    command: caddy --conf=/data/Caddyfile
+    command: gobetween -c data/conf/gobetween
     ports:
     - 9000:9000
     volumes:
