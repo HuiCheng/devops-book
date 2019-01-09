@@ -128,6 +128,14 @@ services:
     volumes:
     - ./data/:/data/
     restart: always
+  keepalived:
+    build:
+      context: data/dockerfile/
+    command: gobetween -c /data/conf/gobetween
+    network_mode: "host"
+    volumes:
+    - ./data/conf/keepalived.conf:/etc/keepalived/keepalived.conf
+    restart: alway
 EOF
 ```
 
