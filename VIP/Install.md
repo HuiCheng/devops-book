@@ -61,7 +61,7 @@ services:
   gobetween:
     build:
       context: data/dockerfile/
-    command: gobetween -c data/conf/gobetween
+    command: gobetween -c /data/gobetween
     ports:
     - 9000:9000
     volumes:
