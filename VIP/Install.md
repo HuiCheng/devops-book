@@ -21,12 +21,14 @@ NODE03=172.11.51.203:6443
 
 ```bash
 mkdir -p $ProjectPath; cd $ProjectPath
+mkdir -p data/{data,conf,dockerfile}/
+
 ```
 
-#### 配置文件
+#### 健康检查
 
 ```bash
-mkdir -p data/{data,conf,dockerfile}/
+
 cat << EOF > data/conf/healthcheck.sh
 #/bin/bash
 timeout 2 curl -k https://\$1:\$2/
