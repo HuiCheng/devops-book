@@ -29,9 +29,8 @@ mkdir -p data/{data,conf,dockerfile}/
 ```bash
 cat << EOF > data/conf/healthcheck.sh
 #/bin/bash
-timeout 2 curl -k https://\$1:\$2/
-if [ "\$?" == "0" ]; then; echo -n 1
-else; echo -n 0; fi
+curl -k https://\$1:\$2/
+if [ "\$?" == "0" ]; then; echo -n 1; else; echo -n 0; fi
 EOF
 ```
 
@@ -56,6 +55,11 @@ static_list = [
     "$NODE02 weight=5",
     "$NODE03 weight=5"
 ]
+[servers.default.healthcheck] 
+kind     = "exec"
+interval = "2s"  
+timeout  = "1s"  
+
 EOF
 ```
 
