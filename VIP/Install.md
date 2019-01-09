@@ -6,7 +6,7 @@ Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
 RouterID=100
-VRRP=ens33
+VRRP=ens33                              #用于发送VRRP协议的接口
 VIP="172.16.190.100/24 dev ens33"
 
 PORT=6443
