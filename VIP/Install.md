@@ -42,6 +42,14 @@ static_list = [
 ]
 EOF
 
+cat << EOF > data/dockerfile/Dockerfile
+FROM alpine:3.8
+ENV  pkgs bash curl keepalived tzdata
+RUN  apk add --no-cache $PKGS && \
+     ln -snf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+RUN 
+EOF
+
 cat << EOF > data/conf/keepalived.conf
 EOF
 
