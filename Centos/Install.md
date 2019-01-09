@@ -69,7 +69,6 @@ sysctl -p
 #### ulimit
 
 ```bash
-# ulimit
 cat << EOF > /etc/security/limits.d/80-nofile.conf
 *    soft nofile 655350
 *    hard nofile 655350
@@ -83,5 +82,8 @@ swapoff -a
 sed -i 's/^[^#].*swap/#&/' /etc/fstab
 ```
 
+#### 必要软件
 
-
+```bash
+yum install -y curl wget 
+```
