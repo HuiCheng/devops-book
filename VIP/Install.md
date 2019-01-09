@@ -131,7 +131,7 @@ services:
   keepalived:
     build:
       context: data/dockerfile/
-    command: /usr/sbin/keepalived -D
+    command: keepalived -D -n -l
     network_mode: "host"
     volumes:
     - ./data/conf/keepalived.conf:/etc/keepalived/keepalived.conf
