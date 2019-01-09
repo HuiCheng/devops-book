@@ -11,7 +11,7 @@ repo_gpgcheck=1
 gpgkey=https://mirrors.aliyun.com/kubernetes/yum/doc/yum-key.gpg https://mirrors.aliyun.com/kubernetes/yum/doc/rpm-package-key.gpg
 EOF
 
-VERSION=1.13.0-0
+VERSION=1.13.1-0
 yum install -y kubelet-$VERSION kubeadm-$VERSION kubectl-$VERSION
 
 systemctl start  kubelet
