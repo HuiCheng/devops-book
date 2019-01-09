@@ -29,7 +29,7 @@ done
 #### 时间同步
 
 ```bash
-yum install -y epel-release ntp
+yum install -y ntp
 cat << EOF > /etc/ntp.conf
 logfile    /var/log/ntp.log
 pidfile    /var/run/ntpd.pid
@@ -85,5 +85,8 @@ sed -i 's/^[^#].*swap/#&/' /etc/fstab
 #### 必要软件
 
 ```bash
-yum install -y curl wget 
+yum install -y curl wget epel-release
 ```
+
+
+
