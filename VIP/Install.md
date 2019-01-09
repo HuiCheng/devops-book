@@ -5,7 +5,7 @@ BasePath=/data/apps/VIP/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
-RouterID=200
+RouterID=100
 VRRP=ens33
 VIP="172.16.190.100/24 dev ens33"
 
