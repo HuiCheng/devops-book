@@ -56,10 +56,10 @@ static_list = [
     "$NODE03 weight=5"
 ]
 [servers.default.healthcheck] 
-kind     = "exec"
-interval = "2s"  
-timeout  = "1s"  
-
+kind         = "exec"
+interval     = "2s"  
+timeout      = "2s"  
+exec_command = "/data/conf/exec_healthcheck.sh"
 EOF
 ```
 
@@ -93,10 +93,10 @@ services:
   gobetween:
     build:
       context: data/dockerfile/
-    command: gobetween -c /data/gobetween
+    command: gobetween -c /data/conf/gobetween
     network_mode: "host"
     volumes:
-    - ./data/conf/:/data/
+    - ./data/:/data/
     restart: always
 EOF
 ```
