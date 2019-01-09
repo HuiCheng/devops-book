@@ -29,7 +29,7 @@ mkdir -p data/{data,conf,dockerfile}/
 ```bash
 cat << EOF > data/conf/healthcheck.sh
 #!/usr/bin/env bash
-curl -k https://\$1:\$2/
+curl -sk https://\$1:\$2/ 2>&1 > /dev/null
 echo -n \$?
 EOF
 ```
