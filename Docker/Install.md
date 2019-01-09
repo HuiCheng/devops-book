@@ -29,6 +29,11 @@ cat << EOF > /etc/docker/daemon.json
     "registry-mirrors": ["https://h3vtnoaa.mirror.aliyuncs.com"]
 }
 EOF
+cat << EOF > /usr/lib/sysctl.d/81-docker.conf
+net.ipv4.ip_forward=1
+net.bridge.bridge-nf-call-iptables = 1
+net.bridge.bridge-nf-call-ip6tables = 1
+EOF
 ```
 
 #### 启动
