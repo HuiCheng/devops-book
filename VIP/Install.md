@@ -4,16 +4,19 @@
 BasePath=/data/apps/VIP/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
+VIP=172.16.190.200
 
 mkdir -p $ProjectPath
 cd $ProjectPath
 
 mkdir -p data/{data,conf,dockerfile}/
-cat << EOF > data/conf/Caddyfile
-
+cat << EOF > data/conf/gobetween
+:6443 {
+    
+}
 EOF
 
-cat << EOF > data/conf/Keepalived.conf
+cat << EOF > data/conf/keepalived.conf
 EOF
 
 cat << EOF > docker-compose.yaml

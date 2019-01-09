@@ -18,6 +18,7 @@ yum install -y docker-ce-$Version
 
 ```bash
 mkdir -p /etc/docker/
+cat << EOF > /etc/docker/daemon.json
 {
     "graph": "/data/apps/docker/",
     "log-opts": {"max-size": "1024m", "max-file": "10"},
