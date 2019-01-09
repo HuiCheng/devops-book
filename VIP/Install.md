@@ -27,7 +27,9 @@ NODE03=172.11.51.203:6443
 cat << EOF > /etc/sysctl.d/81-vip.conf
 net.ipv4.ip_nonlocal_bind = 1
 EOF
-sysctl -p 
+
+sysctl -p /etc/sysctl.d/81-vip.conf
+
 
 mkdir -p $ProjectPath; cd $ProjectPath
 mkdir -p data/{data,conf,dockerfile}/
