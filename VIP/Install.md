@@ -81,6 +81,21 @@ RUN  apk add --no-cache \$PKGS && \
 EOF
 ```
 
+#### Docker-compose
+```bash
+cat << EOF > docker-compose.yaml
+version: '2.2'
+services:
+gobetween:
+build:
+context: data/dockerfile/
+command: gobetween -c /data/conf/gobetween
+network_mode: "host"
+volumes:
+- ./data/:/data/
+restart: always
+EOF
+```
 
 #### 启动
 
