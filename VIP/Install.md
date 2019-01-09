@@ -76,7 +76,6 @@ services:
     - ./data/:/data/
     restart: always
 EOF
-
 ```
 
 #### 启动
