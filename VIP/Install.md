@@ -5,6 +5,11 @@ BasePath=/data/apps/VIP/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
 VIP=172.16.190.200
+PORT=6443
+NODE01=172.11.51.201:6443
+NODE02=172.11.51.202:6443
+NODE03=172.11.51.203:6443
+
 
 mkdir -p $ProjectPath
 cd $ProjectPath
@@ -19,7 +24,23 @@ EOF
 
 
 cat << EOF > data/conf/gobetween
+[servers.k8s-vip]
+bind     = "\$VIP:\$PORT"
+protocol = "tcp"
+balance  = "roundrobin"
 
+max_connections      = 10000
+client_idle_timeout  = "60m"
+backend_idle_timeout = "60m"
+backend_connection_timeout = "2s"
+
+[servers.k8s-vip.discovery]
+kind = "static"
+static_list = [
+  "\$NODE01 weight=5",
+  "\$NODE01 weight=5",
+  "\$NODE01 weight=5"
+]
 EOF
 
 cat << EOF > data/conf/keepalived.conf
