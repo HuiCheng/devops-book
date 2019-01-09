@@ -131,7 +131,7 @@ services:
   keepalived:
     build:
       context: data/dockerfile/
-    command: gobetween -c /data/conf/gobetween
+    command: /usr/sbin/keepalived -D
     network_mode: "host"
     volumes:
     - ./data/conf/keepalived.conf:/etc/keepalived/keepalived.conf
