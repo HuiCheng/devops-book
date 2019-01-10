@@ -36,7 +36,7 @@ mkdir -p data/data/
 cat << EOF > docker-compose.yaml
 version: '2.2'
 services:
-  etcd:
+  etcd:
     image: registry.cn-hangzhou.aliyuncs.com/google_containers/etcd-amd64:3.2.24
     command: etcd-3.2.24
     network_mode: "host"
