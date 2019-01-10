@@ -66,3 +66,8 @@ docker-compose up -d
 ```bash
 docker exec -i k8s-01_etcd_1 etcdctl -C http://172.16.190.155:2379 member list
 ```
+
+#### 日志
+```bash
+docker logs -f --tail=30 k8s-01_etcd_1
+```
