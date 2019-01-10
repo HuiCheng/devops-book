@@ -5,6 +5,7 @@ BasePath=/data/apps/etcd/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
+Name=node01
 PeerPORT=2380
 PeerAddress=172.16.190.155   #每个节点需要单独配置 属于下面列表中元素
 ClientPORT=2379
@@ -41,6 +42,7 @@ services:
     command: etcd-3.2.24
     network_mode: "host"
     environment:
+    - ETCD_NAME=$Name
     - ETCD_DATA_DIR=/data/
     - ETCD_LISTEN_CLIENT_URLS=http://$ClientAddress:$ClientPORT
     - ETCD_ADVERTISE_CLIENT_URLS=http://$ClientAddress:$ClientPORT
