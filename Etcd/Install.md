@@ -41,7 +41,6 @@ services:
     command: etcd-3.2.24
     network_mode: "host"
     environment:
-    - ETCD_NAME=
     - ETCD_DATA_DIR=/data/
     - ETCD_LISTEN_CLIENT_URLS=http://127.0.0.1:$ClientPORT,http://$ClientAddress:$ClientPORT
     - ETCD_ADVERTISE_CLIENT_URLS=http://$ClientAddress:$ClientPORT
