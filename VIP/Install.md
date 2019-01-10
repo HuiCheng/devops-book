@@ -139,7 +139,7 @@ services:
     - ./data/conf/keepalived.conf:/etc/keepalived/keepalived.conf
     restart: always
     cap_add:
-    - NET_ADMIN
+    - ALL
 EOF
 ```
 
