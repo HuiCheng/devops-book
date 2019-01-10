@@ -8,7 +8,13 @@ BasePath=/data/apps/etcd/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
+PeerPORT=2380
+PeerAddress=172.11.51.201   #每个节点需要单独配置
 ClientPORT=2379
+ClientAddress=172.11.51.201 #每个节点需要单独配置
+
+
+
 NODE01=172.11.51.201:2380
 NODE02=172.11.51.202:2380
 NODE03=172.11.51.203:2380
