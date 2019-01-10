@@ -62,5 +62,7 @@ EOF
 docker-compose up -d
 ```
 
-
-
+#### 状态
+```bash
+docker exec -i k8s-01_etcd_1 etcdctl -C http://172.16.190.155:2379 member list
+```
