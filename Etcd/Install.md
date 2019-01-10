@@ -9,9 +9,9 @@ Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
 PeerPORT=2380
-PeerAddress=172.11.51.201   #每个节点需要单独配置 要在下面列表中
+PeerAddress=172.11.51.201   #每个节点需要单独配置 属于下面列表中元素
 ClientPORT=2379
-ClientAddress=172.11.51.201 #每个节点需要单独配置 要在下面列表中
+ClientAddress=172.11.51.201 #每个节点需要单独配置 属于下面列表中元素
 
 NODE01=172.11.51.201
 NODE02=172.11.51.202
