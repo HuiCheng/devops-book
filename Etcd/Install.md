@@ -51,7 +51,8 @@ services:
     - ETCD_LISTEN_PEER_URLS=http://$PeerAddress:$PeerPORT
     - ETCD_INITIAL_ADVERTISE_PEER_URLS=http://$PeerAddress:$PeerPORT
     - ETCD_INITIAL_CLUSTER_TOKEN=$Token
-    - 
+    - ETCD_INITIAL_CLUSTER=node01=http://NODE01:$PeerPORT,node02=http://NODE02:$PeerPORT,node03=http://NODE03:$PeerPORT
+
     volumes:
     - ./data/data/:/data/
     restart: always
