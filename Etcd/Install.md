@@ -4,18 +4,14 @@
 # Install
 
 ```bash
-BasePath=/data/apps/VIP/
+BasePath=/data/apps/etcd/
 Name=k8s-01
 ProjectPath=$BasePath/$Name/
 
-RouterID=100
-VRRP=ens33                              #用于发送VRRP协议的接口
-VIP="172.16.190.100/24 dev ens33"       #VIP配置信息
-
-PORT=6443
-NODE01=172.11.51.201:6443
-NODE02=172.11.51.202:6443
-NODE03=172.11.51.203:6443
+ClientPORT=2379
+NODE01=172.11.51.201:2380
+NODE02=172.11.51.202:2380
+NODE03=172.11.51.203:2380
 ```
 
 # Requirements
